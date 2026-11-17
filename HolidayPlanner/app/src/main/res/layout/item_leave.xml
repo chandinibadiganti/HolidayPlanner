@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="?attr/colorOutlineVariant"
+    android:layout_marginBottom="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+
+            <TextView
+                android:id="@+id/tvLeaveTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="?attr/colorOnSurface"
+                android:textStyle="bold"
+                tools:text="Family Trip" />
+
+            <!-- Duration Badge -->
+            <TextView
+                android:id="@+id/tvDurationBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_check"
+                android:backgroundTint="?attr/colorSecondaryContainer"
+                android:textColor="?attr/colorOnSecondaryContainer"
+                android:textAppearance="?attr/textAppearanceLabelSmall"
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                tools:text="4 days" />
+        </LinearLayout>
+
+        <!-- Dates Range -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_calendar"
+                app:tint="?attr/colorPrimary"
+                android:contentDescription="@null"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:id="@+id/tvLeaveDateRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorPrimary"
+                android:textStyle="bold"
+                tools:text="15 Aug 2026 – 18 Aug 2026" />
+        </LinearLayout>
+
+        <!-- Included Public Holidays Hint -->
+        <TextView
+            android:id="@+id/tvIncludedHolidays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?attr/colorTertiary"
+            android:layout_marginBottom="6dp"
+            tools:text="Includes 1 public holiday: Independence Day" />
+
+        <!-- Optional Note -->
+        <TextView
+            android:id="@+id/tvLeaveNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="Flight booked on Friday evening" />
+
+        <!-- Action Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="4dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditLeave"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="@string/edit_leave"
+                app:icon="@drawable/ic_edit"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:padding="0dp"
+                android:minWidth="0dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="@string/cd_edit_leave" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDeleteLeave"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="@string/delete"
+                app:icon="@drawable/ic_delete"
+                style="@style/Widget.Material3.Button.TextButton"
+                app:iconTint="?attr/colorError"
+                android:textColor="?attr/colorError"
+                android:padding="0dp"
+                android:minWidth="0dp"
+                android:contentDescription="@string/cd_delete_leave" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

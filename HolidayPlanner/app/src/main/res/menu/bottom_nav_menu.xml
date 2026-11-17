@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_holidays"
+        android:icon="@drawable/ic_holiday"
+        android:title="@string/nav_holidays" />
+    <item
+        android:id="@+id/action_leaves"
+        android:icon="@drawable/ic_leave"
+        android:title="@string/nav_leaves" />
+</menu>
